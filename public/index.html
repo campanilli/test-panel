@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acesso aos painéis</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+<main class="card">
+  <header class="brand"><span class="logo" aria-hidden="true">P</span><strong>Portal de painéis</strong></header>
+  <div id="alert" class="alert" role="alert" hidden></div>
+
+  <!-- VISÃO 1: LOGIN -->
+  <section id="view-login" class="view active">
+    <h1>Entrar</h1>
+    <form id="form-login" novalidate>
+      <label class="field">E-mail<input type="email" id="login-email" autocomplete="email" inputmode="email"></label>
+      <label class="field">Senha<input type="password" id="login-senha" autocomplete="current-password"></label>
+      <button class="btn primary" type="submit">Entrar</button>
+    </form>
+    <div class="sep"><span>ou</span></div>
+    <button class="btn google" id="btn-google-login" type="button">Entrar com Google</button>
+    <p class="switch">Ainda não tem conta? <button class="link" type="button" data-goto="cadastro">Criar conta</button></p>
+  </section>
+
+  <!-- VISÃO 2: CADASTRO -->
+  <section id="view-cadastro" class="view">
+    <h1>Criar conta</h1>
+    <button class="btn google" id="btn-google-cad" type="button">Preencher e-mail com Google</button>
+    <form id="form-cadastro" novalidate>
+      <div class="row">
+        <label class="field">Nome<input id="cad-nome" autocomplete="given-name"></label>
+        <label class="field">Sobrenome<input id="cad-sobrenome" autocomplete="family-name"></label>
+      </div>
+      <div class="row">
+        <label class="field">RG<input id="cad-rg" inputmode="text" maxlength="14"></label>
+        <label class="field">CPF<input id="cad-cpf" inputmode="numeric" placeholder="000.000.000-00"></label>
+      </div>
+      <label class="field">Celular<input id="cad-celular" type="tel" inputmode="tel" placeholder="(11) 98765-4321" autocomplete="tel"></label>
+      <label class="field">Endereço completo<input id="cad-endereco" autocomplete="street-address" placeholder="Rua, número, bairro - cidade/UF"></label>
+      <label class="field">E-mail (de preferência Gmail)<input type="email" id="cad-email" autocomplete="email" inputmode="email"></label>
+      <div class="row">
+        <label class="field">Senha<input type="password" id="cad-senha" autocomplete="new-password"></label>
+        <label class="field">Confirmar senha<input type="password" id="cad-senha2" autocomplete="new-password"></label>
+      </div>
+
+      <fieldset class="field" id="fs-tipo"><legend>Tipo de acesso</legend>
+        <label class="opt"><input type="radio" name="tipoAcesso" value="administrador"> Administrador</label>
+        <label class="opt"><input type="radio" name="tipoAcesso" value="consulta"> Consulta</label>
+      </fieldset>
+
+      <fieldset class="field" id="fs-grupos"><legend>Grupos de acesso</legend>
+        <div id="grupos-box"></div>
+      </fieldset>
+
+      <!-- Preenchido dinamicamente conforme os grupos marcados -->
+      <div id="paineis-box"></div>
+
+      <p class="hint">Todas as solicitações ficam com status <span class="badge pendente">pendente</span> até a aprovação do administrador. O acesso vale por 1 ano.</p>
+      <button class="btn primary" type="submit">Enviar cadastro</button>
+    </form>
+    <p class="switch"><button class="link" type="button" data-goto="login">Já tenho conta</button></p>
+  </section>
+
+  <!-- VISÃO 3: RESULTADO PÓS-LOGIN (seleção de painel / mensagens) -->
+  <section id="view-resultado" class="view">
+    <h1 id="res-titulo"></h1>
+    <p id="res-msg"></p>
+    <ul id="res-lista" class="lista"></ul>
+    <button class="btn ghost" id="btn-sair" type="button">Sair</button>
+  </section>
+</main>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

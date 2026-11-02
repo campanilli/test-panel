@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "a1111111-0000-4000-8000-000000000001",
+      "nome": "Maria", "sobrenome": "Souza",
+      "rg": "11.222.333-4", "cpf": "529.982.247-25", "celular": "(11) 98765-4321",
+      "endereco": "Av. Paulista, 1000 - São Paulo/SP",
+      "email": "maria.souza@gmail.com", "senha": "U2VuaGFAMTIz",
+      "tipoAcesso": "consulta", "dataLimiteAcesso": "2027-10-29T23:59:59.000Z",
+      "grupos": [
+        { "nome": "grupo02", "status": "aprovado", "paineis": [ { "nome": "painel-grupo02-a", "status": "aprovado" } ] }
+      ],
+      "criadoEm": "2026-10-01T10:00:00.000Z", "atualizadoEm": "2026-10-02T10:00:00.000Z"
+    },
+    {
+      "id": "b2222222-0000-4000-8000-000000000002",
+      "nome": "João", "sobrenome": "Silva",
+      "rg": "12.345.678-9", "cpf": "111.444.777-35", "celular": "(21) 97654-3210",
+      "endereco": "Rua Exemplo, 123 - Rio de Janeiro/RJ",
+      "email": "joao.silva@gmail.com", "senha": "U2VuaGFAMTIz",
+      "tipoAcesso": "consulta", "dataLimiteAcesso": "2027-10-29T23:59:59.000Z",
+      "grupos": [
+        { "nome": "grupo01", "status": "pendente", "paineis": [
+          { "nome": "painel-grupo01-a", "status": "pendente" },
+          { "nome": "painel-grupo01-b", "status": "pendente" } ] }
+      ],
+      "criadoEm": "2026-10-29T10:00:00.000Z", "atualizadoEm": "2026-10-29T10:00:00.000Z"
+    },
+    {
+      "id": "c3333333-0000-4000-8000-000000000003",
+      "nome": "Carlos", "sobrenome": "Lima",
+      "rg": "22.333.444-5", "cpf": "935.411.347-80", "celular": "(31) 99876-5432",
+      "endereco": "Rua das Flores, 45 - Belo Horizonte/MG",
+      "email": "carlos.lima@gmail.com", "senha": "U2VuaGFAMTIz",
+      "tipoAcesso": "administrador", "dataLimiteAcesso": "2027-10-29T23:59:59.000Z",
+      "grupos": [
+        { "nome": "grupo01", "status": "aprovado", "paineis": [
+          { "nome": "painel-grupo01-a", "status": "aprovado" },
+          { "nome": "painel-grupo01-b", "status": "aprovado" } ] },
+        { "nome": "grupo03", "status": "aprovado", "paineis": [ { "nome": "painel-grupo03-a", "status": "aprovado" } ] },
+        { "nome": "grupo04", "status": "pendente", "paineis": [ { "nome": "painel-grupo04-a", "status": "pendente" } ] }
+      ],
+      "criadoEm": "2026-09-15T10:00:00.000Z", "atualizadoEm": "2026-10-10T10:00:00.000Z"
+    }
+  ]
+}
